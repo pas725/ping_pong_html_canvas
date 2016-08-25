@@ -2,43 +2,47 @@
     var canvas;
     var canvasContext;
 
+    // Ball
+    const BALL_RADIUS = 5;
     var ballX = 200;
     var ballY = 250;
-    var BALL_RADIUS = 5;
     var ballXDir = 8;	// Ball speed : X direction
     var ballYDir = 8; 	// Ball speed : Y direction
 
+    // Paddle
+    const PADDLE_WIDTH = 10;
+    const INIT_PADDLE1_X = 10;
+    const PADDLE_HEIGHT = 100;
+    var PADDLE2_MOVING_SPEED_Y = 7; // Increase this value to increase difficulty level
+    var INIT_PADDLE2_X;
     var paddle1Y = 100;
     var paddle2Y = 250;
-    var PADDLE_HEIGHT = 100;
-    var PADDLE_WIDTH = 10;
-    var INIT_PADDLE1_X = 10;
-    var INIT_PADDLE2_X;
-    var PADDLE2_MOVING_SPEED_Y = 7; // Increase this value to increase difficulty level
 
+    // Paddle movement limit(Vertically)
     var MAX_PADDLE_Y;
     var MIN_PADDLE_Y;
 
+    // Canvas length
     var BOARD_LENGTH_X;
     var BOARD_LENGTH_Y;
 
     const SCORE_AREA_Y = 80;
-
     const PADDING_Y = 10;
-    const PLAYING_BORDER_COLOR = 'WHITE';
+
+    const WINNIG_SCORE = 5;
 
     // Colors for game elements
-    var PADDLE_COLOR = 'WHITE';
-    var BALL_COLOR = 'white';
-    var BG_COLOR = 'black';
+    const PLAYING_BORDER_COLOR = 'WHITE';
+    const PADDLE_COLOR = 'WHITE';
+    const BALL_COLOR = 'white';
+    const BG_COLOR = 'black';
 
-    var USER_1 = 'YOU';
-    var USER_2 = 'COMPUTER';
+    // Usernames
+    const USER_1 = 'YOU';
+    const USER_2 = 'COMPUTER';
 
     var userScore = 0;
     var computerScore = 0;
-
-    const WINNIG_SCORE = 5;
 
     var isWindowReloaded = true;
 
